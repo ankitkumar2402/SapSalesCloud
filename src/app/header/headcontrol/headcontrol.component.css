@@ -1,0 +1,39 @@
+.header{
+  display: grid;
+  background: rgb(40, 178, 202);
+  height: 40px;
+}
+
+.header-content{
+  cursor: pointer;
+}
+
+.header-left-content{
+  padding: 10px;
+  grid-row: 1;
+  text-align: start;
+}
+
+.header-middle-content{
+  padding: 10px;
+  grid-row: 1;
+  text-align: center;
+}
+
+.header-right-content{
+  padding: 10px;
+  grid-row: 1;
+  text-align: end;
+}
+
+.button-color{
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+.text-color{
+  color: white;
+}
+
+

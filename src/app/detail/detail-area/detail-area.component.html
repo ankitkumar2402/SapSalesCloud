@@ -1,0 +1,78 @@
+<div class = "detailPart" [ngClass] = 'addMarginOnMenuPress()'>
+  <div class = "tableParent">
+    <table #tableControl class = "datalist">
+      <thead class = "dataListLabelsHead">
+        <tr #rowHead>
+          <th>
+            <input type="checkbox" class = "checkboxSize" (change) = "onSelectAll($event, rowHead, tableControl, this)" [(ngModel)] = "bCheckedAll">
+          </th>
+          <th>Employee Id</th>
+          <th>Name</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>State</th>
+        </tr>
+      </thead>
+      <tbody class = "dataListBodyValues">
+        <tr #row1>
+          <td>
+            <input type="checkbox" class = "checkboxSize" [checked] = "bCheckedAll" (change) = "onSelectRow($event, row1, tableControl)">
+          </td>
+          <td>123</td>
+          <td>Ankit</td>
+          <td>Dugri</td>
+          <td>Ludhiana</td>
+          <td>Punjab</td>
+        </tr>
+        <tr #row2>
+          <td>
+            <input type="checkbox" class = "checkboxSize" [checked] = "bCheckedAll" (change) = "onSelectRow($event, row2, tableControl)">
+          </td>
+          <td>123</td>
+          <td>Ankit</td>
+          <td>Dugri</td>
+          <td>Ludhiana</td>
+          <td>Punjab</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class = "tableParent">
+    <table #tableControlTwo class = "datalist">
+      <thead class = "dataListLabelsHead">
+        <tr #rowHeader>
+          <th>
+            <input type="checkbox" class = "checkboxSize" (change) = "onSelectAll($event, rowHeader, tableControlTwo, this)" [(ngModel)] = "bCheckedAllTwo">
+          </th>
+          <th>Tenant Id</th>
+          <th>Bo Name</th>
+          <th>Bo Node Id</th>
+          <th>Uuid</th>
+          <th>User</th>
+          <th>Changed By</th>
+          <th>Flagged</th>
+        </tr>
+      </thead>
+      <tbody class = "dataListBodyValues">
+        <ng-container >
+          <tr #row *ngFor = 'let data of serviceData'>
+            <td>
+              <input #checkbox type="checkbox" class = "checkboxSize" [ngModel] = "bCheckedAllTwo" (ngModelChange) = "onModelChange($event, row)" [checked] = "bCheckedAllTwo" (change) = "onSelectRow($event, row, tableControlTwo)">
+            </td>
+            <td>{{data.tenantId}}</td>
+            <td>{{data.boName}}</td>
+            <td>{{data.boNodeId}}</td>
+            <td>{{data.uuid}}</td>
+            <td>{{data.username}}</td>
+            <td>{{data.changedBy}}</td>
+            <td>{{data.type | stringToBool}}</td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+
+
+</div>

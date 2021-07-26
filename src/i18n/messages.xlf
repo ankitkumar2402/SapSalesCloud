@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="2524425246913202598" datatype="html">
+        <source>SAP Sales Cloud</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/headcontrol/headcontrol.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description"> Header Text</note>
+        <note priority="1" from="meaning">title </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
